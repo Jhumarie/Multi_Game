@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="My_game.css">
+    <title>GAME </title>
+</head>
+<body>
+
+    <section class="section_1">
+        
+        <div class="form_1">
+            <h1>WELCOME</h1>
+            <div class="form_div">
+                <label>ENTER YOUR IGN</label><br/>
+                <label class="error">Enter your ign first *</label><br/>
+                <input id="input_name" type="text" placeholder="Please enter your name: " required><br/>
+                <input type="submit" value="ENTER" id="submit_button" onclick="submitBtn()">
+            </div>
+        </div>
+
+        <div id="ign">
+            <h1 id="player-ign"></h1>
+        </div>
+
+        <div id="choose-game">
+            <div id="game-1">
+                <div id="game-img">
+                    <img src="image/game1.jpg" alt="IMG">
+                </div>
+                <div class="game1-text">
+                    <h1>ROCK-PAPER-SCISSOR</h1>
+                    <button id="my-game-1-btn" onclick="rpc()">PLAY</button>
+                </div>
+            </div>
+
+            <div id="game-1">
+                <div id="game-img">
+                    <img src="image/game2.jpg" alt="IMG">
+                </div>
+                <div class="game1-text">
+                    <h1>GUESS THE NUMBER ▶</h1>
+                    <button id="my-game-2-btn" onclick="rpc2()">PLAY</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="rock-paper-scissor">
+            <h1>ROCK - PAPER - SCISSOR</h1>
+        </div>
+
+        <div class="my-game-1"> 
+            <div class="choices"> 
+                <button onclick="playGame('rock')">👊</button>
+                <button onclick="playGame('paper')">✋</button>
+                <button onclick="playGame('scissors')">✌</button>
+            </div>
+
+            <h1 id="playerDisplay">PLAYER: </h1>
+            <h1 id="computerDisplay">COMPUTER: </h1>
+            <h1 id="resultDisplay">CHOOSE NOW</h1>
+
+            <div class="scoreDisplay">Player Score: 
+                <span id="playerScoreDisplay">0</span>
+            </div>
+
+            <div class="scoreDisplay">Computer Score: 
+                <span id="computerScoreDisplay">0</span>
+            </div>
+        </div>  
+
+
+        <div class="guess-number-title">
+            <h1>GUESS THE NUMBER</h1>
+        </div>
+
+        <div class="guess-number-box">
+            
+            <div class="guess-number-int">
+                <div class="first-input">
+                    <h1 id="attemps">YOUR ATTEMPS</h1>
+                    <h1 id="error3">GUESS THE NUMBER FROM 1 - 100</h1>
+                    <label id="label1">❗ Please enter a valid number ❗</label>
+                    <input class="type-box-1" type="text" placeholder="Enter your answer: "><br/>
+                    <input class="type-box-2" type="submit" onclick="gtnBtn()" value="ENTER">
+                </div>
+                <h1 id="result-text">❗ GUESS ❗</h1>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="My_game.js"></script>
+</html>
